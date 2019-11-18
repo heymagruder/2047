@@ -1,0 +1,203 @@
+<style>
+.main_div {
+  width: 100vw;
+  height: 100vh;
+  background: red;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.main_div form {
+  box-sizing: border-box;
+  text-align: center;
+  padding: 22px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: fixed;
+  height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.main_div form input {
+  height: 0;
+  margin: 12px 0;
+  z-index: 1;
+}
+
+.main_div form input:checked {
+  outline: 0;
+  border: 0;
+}
+
+.main_div form input:before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.81);
+  border-radius: 11px;
+  cursor: pointer;
+  -webkit-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+
+.main_div form input:checked:before { background-color: white; }
+
+.main_div form input:after {
+  content: "" attr(title) "";
+  position: relative;
+  left: 30px;
+  opacity: 0;
+  color: white;
+  font-size: 9px;
+  display: block;
+  min-width: 80px;
+  -webkit-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+
+.main_div form input:checked:after {
+  opacity: 1;
+  left: 20px;
+}
+.main_div form input:hover:after:not(label) {
+ opacity: 1;
+}
+
+.main_div form input:nth-of-type(1):checked ~ .labels label {
+  -webkit-transform: translateY(-0%);
+  transform: translateY(-0%);
+}
+
+.main_div form input:nth-of-type(2):checked ~ .labels label {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+.main_div form input:nth-of-type(3):checked ~ .labels label {
+  -webkit-transform: translateY(-200%);
+  transform: translateY(-200%);
+}
+
+.main_div form input:nth-of-type(4):checked ~ .labels label {
+  -webkit-transform: translateY(-300%);
+  transform: translateY(-300%);
+}
+
+.main_div form input:nth-of-type(5):checked ~ .labels label {
+  -webkit-transform: translateY(-400%);
+  transform: translateY(-400%);
+}
+
+.main_div form input:nth-of-type(6):checked ~ .labels label {
+  -webkit-transform: translateY(-500%);
+  transform: translateY(-500%);
+}
+
+.main_div form input:nth-of-type(7):checked ~ .labels label {
+  -webkit-transform: translateY(-600%);
+  transform: translateY(-600%);
+}
+
+.main_div form .labels {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.main_div form .labels label {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #2B2B38;
+  z-index: 0;
+  -webkit-transition: all 0.75s cubic-bezier(0.75, 0.25, 0, 1.05);
+  transition: all 0.75s cubic-bezier(0.75, 0.25, 0, 1.05);
+}
+
+.main_div form .labels label:nth-child(odd) {
+  background-color: #F5004F;
+  color: white !important;
+}
+</style>
+<div class="main_div">
+  <form>
+    <input type="radio" id="Slide_1" name="slider" title="Section1"  checked="checked"/>
+    <input type="radio" id="Slide_2" name="slider" title="Section 2"/>
+    <input type="radio" id="Slide_3" name="slider" title="Section 3"/>
+    <input type="radio" id="Slide_4" name="slider" title="Section 4"/>
+    <input type="radio" id="Slide_5" name="slider" title="Section 5"/>
+    <div class="labels">
+      <label for="Slide_1" id="Slide_1" class="Slide">
+        <div class="content">
+          <h2>Section 1</h2>
+        </div>
+      </label>
+      <label for="Slide_2" id="Slide_2" class="Slide">
+        <div class="content">
+          <h2>Section 2</h2>
+        </div>
+      </label>
+      <label for="Slide_3" id="Slide_3" class="Slide">
+        <div class="content">
+          <h2>Section 3</h2>  
+        </div>
+      </label>
+      <label for="Slide_4" id="Slide_4" class="Slide">
+        <div class="content">
+          <h2>Section 4</h2>
+        </div>
+      </label>
+	  <label for="Slide_5" id="Slide_5" class="Slide">
+        <div class="content">
+          <h2>Section 5</h2>
+        </div>
+      </label>
+    </div>
+  </form>
+</div>
