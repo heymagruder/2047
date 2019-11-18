@@ -1,4 +1,9 @@
 <style>
+
+.content {
+  width: 80%;
+}
+
 .main_div {
   width: 100vw;
   height: 100vh;
@@ -52,7 +57,6 @@
   display: inline-block;
   width: 8px;
   height: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.81);
   border-radius: 11px;
   cursor: pointer;
   -webkit-transition: all 0.25s linear;
@@ -161,43 +165,7 @@
 }
 
 .main_div form .labels label:nth-child(odd) {
-  background-color: #F5004F;
+  background-color: #8015EA;
   color: white !important;
 }
 </style>
-<div class="main_div">
-  <form>
-    <input type="radio" id="Slide_1" name="slider" title="Section1"  checked="checked"/>
-    <input type="radio" id="Slide_2" name="slider" title="Section 2"/>
-    <input type="radio" id="Slide_3" name="slider" title="Section 3"/>
-    <input type="radio" id="Slide_4" name="slider" title="Section 4"/>
-    <input type="radio" id="Slide_5" name="slider" title="Section 5"/>
-    <div class="labels">
-      <label for="Slide_1" id="Slide_1" class="Slide">
-        <div class="content">
-          <h2>Section 1</h2>
-        </div>
-      </label>
-      <label for="Slide_2" id="Slide_2" class="Slide">
-        <div class="content">
-          <h2>Section 2</h2>
-        </div>
-      </label>
-      <label for="Slide_3" id="Slide_3" class="Slide">
-        <div class="content">
-          <h2>Section 3</h2>  
-        </div>
-      </label>
-      <label for="Slide_4" id="Slide_4" class="Slide">
-        <div class="content">
-          <h2>Section 4</h2>
-        </div>
-      </label>
-	  <label for="Slide_5" id="Slide_5" class="Slide">
-        <div class="content">
-          <h2>Section 5</h2>
-        </div>
-      </label>
-    </div>
-  </form>
-</div>
